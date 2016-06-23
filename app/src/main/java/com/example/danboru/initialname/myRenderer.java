@@ -14,7 +14,9 @@ import javax.microedition.khronos.opengles.GL10;
 public class myRenderer implements GLSurfaceView.Renderer {
 
     private static final String TAG = "MyGLRenderer";
-    private Triangle mTriangle, mT;
+
+    private Triangle mTriangle1,mTriangle2,mTriangle3,mTriangle4,mTriangle5,mTriangle6
+            ,mTriangle7,mTriangle8,mTriangle9,mTriangle10,mTriangle11,mTriangle12;
 
     private final float[] mMVPMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
@@ -39,18 +41,88 @@ public class myRenderer implements GLSurfaceView.Renderer {
         //Bottom Left
         //Bottom Right
 
-        float triangleCoords[] = {
+        float triangleCoords1[] = {//selesai
 
-                0.0f, 1.0f, 0.0f,
-                0.0f, -0.3f, 0.0f,
-                0.5f, -0.3f, 0.0f
+                0.4f, 0.7f, 0.0f,
+                0.0f, 0.4f, 0.0f,
+                0.4f, 0.0f, 0.0f
         };
 
-        float triangleCoords2[] = {
+        float triangleCoords2[] = {//selesai
 
-                0.0f, 0.6f, 0.0f,
-                -0.5f, -0.3f, 0.0f,
-                0.5f, -0.3f, 0.0f
+                0.4f, 0.7f, 0.0f,
+                0.0f, 0.7f, 0.0f,
+                0.0f, 0.4f, 0.0f
+        };
+
+        float triangleCoords3[] = {//selesai
+
+                0.0f, 0.7f, 0.0f,
+                -0.4f, 0.4f, 0.0f,
+                0.0f, 0.4f, 0.0f
+        };
+
+        float triangleCoords4[] = {//selesai
+
+                0.0f, 0.4f, 0.0f,
+                0.0f, 0.0f, 0.0f,
+                0.4f, 0.0f, 0.0f
+        };
+
+        float triangleCoords5[] = {//selesai
+
+                0.0f, 0.4f, 0.0f,
+                -0.4f, 0.4f, 0.0f,
+                0.0f, 0.0f, 0.0f
+        };
+
+        float triangleCoords6[] = {//selesai
+
+                -0.4f, 0.4f, 0.0f,
+                -0.4f, 0.0f, 0.0f,
+                0.0f, 0.0f, 0.0f
+        };
+
+        float triangleCoords7[] = {//selesai
+
+                0.4f, 0.0f, 0.0f,
+                0.0f, -0.4f, 0.0f,
+                0.4f, -0.7f, 0.0f
+        };
+
+        float triangleCoords8[] = {//selesai
+
+                0.4f, 0.0f, 0.0f,
+                0.0f, 0.0f, 0.0f,
+                0.0f, -0.4f, 0.0f
+        };
+
+        float triangleCoords9[] = {//selesai
+
+                0.0f, 0.0f, 0.0f,
+                -0.4f, 0.0f, 0.0f,
+                -0.4f, -0.4f, 0.0f
+        };
+
+        float triangleCoords10[] = {//selesai
+
+                0.0f, 0.0f, 0.0f,
+                -0.4f, -0.4f, 0.0f,
+                0.0f, -0.4f, 0.0f
+        };
+
+        float triangleCoords11[] = {//selesai
+
+                0.0f, -0.4f, 0.0f,
+                0.0f, -0.7f, 0.0f,
+                0.4f, -0.7f, 0.0f
+        };
+
+        float triangleCoords12[] = {
+
+                0.0f, -0.4f, 0.0f,
+                -0.4f, -0.4f, 0.0f,
+                0.0f, -0.7f, 0.0f
         };
 
 
@@ -58,8 +130,18 @@ public class myRenderer implements GLSurfaceView.Renderer {
 
         GLES20.glClearColor(1.000f, 1.000f, 1.000f, 1.0f);
 
-        mTriangle = new Triangle(triangleCoords);
-        mT = new Triangle(triangleCoords2);
+        mTriangle1 = new Triangle(triangleCoords1);
+        mTriangle2 = new Triangle(triangleCoords2);
+        mTriangle3 = new Triangle(triangleCoords3);
+        mTriangle4 = new Triangle(triangleCoords4);
+        mTriangle5 = new Triangle(triangleCoords5);
+        mTriangle6 = new Triangle(triangleCoords6);
+        mTriangle7 = new Triangle(triangleCoords7);
+        mTriangle8 = new Triangle(triangleCoords8);
+        mTriangle9 = new Triangle(triangleCoords9);
+        mTriangle10 = new Triangle(triangleCoords10);
+        mTriangle11 = new Triangle(triangleCoords11);
+        mTriangle12 = new Triangle(triangleCoords12);
 
 
     }
@@ -89,8 +171,19 @@ public class myRenderer implements GLSurfaceView.Renderer {
         //===================================
 
         //deklarasi Object yang akan di draw
-        mTriangle.draw(mMVPMatrix, color);
-        mT.draw(mMVPMatrix, color2);
+        mTriangle1.draw(mMVPMatrix, color);
+        mTriangle2.draw(mMVPMatrix, color2);
+        mTriangle3.draw(mMVPMatrix, color);
+        mTriangle4.draw(mMVPMatrix, color2);
+        mTriangle5.draw(mMVPMatrix, color);
+        mTriangle6.draw(mMVPMatrix, color2);
+        mTriangle7.draw(mMVPMatrix, color);
+        mTriangle8.draw(mMVPMatrix, color2);
+        mTriangle9.draw(mMVPMatrix, color);
+        mTriangle10.draw(mMVPMatrix, color2);
+        mTriangle11.draw(mMVPMatrix, color);
+        mTriangle12.draw(mMVPMatrix, color2);
+
 
         //===================================
 
