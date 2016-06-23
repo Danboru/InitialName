@@ -16,7 +16,7 @@ public class myRenderer implements GLSurfaceView.Renderer {
     private static final String TAG = "MyGLRenderer";
 
     private Triangle mTriangle1,mTriangle2,mTriangle3,mTriangle4,mTriangle5,mTriangle6
-            ,mTriangle7,mTriangle8,mTriangle9,mTriangle10,mTriangle11,mTriangle12;
+            ,mTriangle7,mTriangle8,mTriangle9,mTriangle10,mTriangle11,mTriangle12 ;
 
     private final float[] mMVPMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
@@ -165,24 +165,35 @@ public class myRenderer implements GLSurfaceView.Renderer {
         //===================================
 
         //inisislisasi warna dari object
-        float color[] = {0.184f, 0.310f, 0.310f, 0.0f};
-        float color2[] = {1.0f, 0.0f, 0.0f, 0.0f};
+        float color1[] = {0.184f, 0.310f, 0.310f, 0.0f};
+        float color2[] = {0.824f, 0.412f, 0.118f, 0.0f};
+        float color3[] = {0.871f, 0.722f, 0.529f, 0.0f};
+        float color4[] = {0.255f, 0.412f, 0.882f, 0.0f};
+        float color5[] = {0.000f, 0.749f, 1.000f, 0.0f};
+        float color6[] = {0.498f, 1.000f, 0.831f, 0.0f};
+        float color7[] = {0.561f, 0.737f, 0.561f, 0.0f};
+        float color8[] = {0.604f, 0.804f, 0.196f, 0.0f};
+        float color9[] = {0.678f, 1.000f, 0.184f, 0.0f};
+        float color10[] = {0.580f, 0.000f, 0.827f, 0.0f};
+        float color11[] = {1.000f, 0.647f, 0.000f, 0.0f};
+        float color12[] = {	0.980f, 0.502f, 0.447f, 0.0f};
 
         //===================================
 
         //deklarasi Object yang akan di draw
-        mTriangle1.draw(mMVPMatrix, color);
+        mTriangle1.draw(mMVPMatrix, color1);
         mTriangle2.draw(mMVPMatrix, color2);
-        mTriangle3.draw(mMVPMatrix, color);
-        mTriangle4.draw(mMVPMatrix, color2);
-        mTriangle5.draw(mMVPMatrix, color);
-        mTriangle6.draw(mMVPMatrix, color2);
-        mTriangle7.draw(mMVPMatrix, color);
-        mTriangle8.draw(mMVPMatrix, color2);
-        mTriangle9.draw(mMVPMatrix, color);
-        mTriangle10.draw(mMVPMatrix, color2);
-        mTriangle11.draw(mMVPMatrix, color);
-        mTriangle12.draw(mMVPMatrix, color2);
+        mTriangle3.draw(mMVPMatrix, color3);
+        mTriangle4.draw(mMVPMatrix, color4);
+        mTriangle5.draw(mMVPMatrix, color5);
+        mTriangle6.draw(mMVPMatrix, color6);
+        mTriangle7.draw(mMVPMatrix, color7);
+        mTriangle8.draw(mMVPMatrix, color8);
+        mTriangle9.draw(mMVPMatrix, color9);
+        mTriangle10.draw(mMVPMatrix, color10);
+        mTriangle11.draw(mMVPMatrix, color11);
+        mTriangle12.draw(mMVPMatrix, color12);
+
 
 
         //===================================
