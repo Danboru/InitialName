@@ -18,6 +18,13 @@ public class myRenderer implements GLSurfaceView.Renderer {
     private Triangle mTriangle1,mTriangle2,mTriangle3,mTriangle4,mTriangle5,mTriangle6
             ,mTriangle7,mTriangle8,mTriangle9,mTriangle10,mTriangle11,mTriangle12 ;
 
+    private Triangle1 mHurufA1,mHurufA2,mHurufA3,mHurufA4,mHurufA5,mHurufA6,mHurufA7,
+            mHurufA8,mHurufA9,mHurufA10;
+
+    private Triangle2 mHurufE1,mHurufE2,mHurufE3,mHurufE4,mHurufE5,mHurufE6,mHurufE7,
+            mHurufE8,mHurufE9,mHurufE10;
+
+
     private final float[] mMVPMatrix = new float[16];
     private final float[] mProjectionMatrix = new float[16];
     private final float[] mViewMatrix = new float[16];
@@ -27,7 +34,6 @@ public class myRenderer implements GLSurfaceView.Renderer {
 
     @Override
     public void onSurfaceCreated(GL10 unused, EGLConfig config) {
-
 
         //===================================
 
@@ -41,6 +47,8 @@ public class myRenderer implements GLSurfaceView.Renderer {
         //Bottom Left
         //Bottom Right
 
+        //huruf D
+        /*
         float triangleCoords1[] = {//selesai
 
                 0.4f, 0.7f, 0.0f,
@@ -124,12 +132,188 @@ public class myRenderer implements GLSurfaceView.Renderer {
                 -0.4f, -0.4f, 0.0f,
                 0.0f, -0.7f, 0.0f
         };
+        */
+        /*
+        //===================================
+
+        //Huruf A
+        float shapeA1[] = {//selesai
+
+                0.1f, 0.5f, 0.0f,
+                0.0f, 0.3f, 0.0f,
+                -0.1f, 0.5f, 0.0f
+
+
+        };
+
+        float shapeA2[] = {//selesai
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeA3[] = {//selesai
+
+                -0.1f, 0.5f, 0.0f,
+                0.0f, 0.3f, 0.0f,
+                -0.2f, 0.3f, 0.0f
+
+        };
+
+        float shapeA4[] = {//selesai
+
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.0f, 0.0f,
+                -0.2f, 0.3f, 0.0f
+
+        };
+
+        float shapeA5[] = {//selesai
+
+                0.2f, 0.3f, 0.0f,
+                0.350f, 0.0f, 0.0f,
+                0.0f, 0.0f, 0.0f
+
+        };
+
+        float shapeA6[] = {//selesai
+
+                -0.2f, 0.3f, 0.0f,
+                -0.350f, 0.0f, 0.0f,
+                0.0f, 0.0f, 0.0f
+
+        };
+
+        float shapeA7[] = {//selesai
+
+                0.350f, 0.0f, 0.0f,
+                0.1f, -0.4f, 0.0f,
+                0.0f, 0.0f, 0.0f
+
+        };
+
+        float shapeA8[] = {//selesai
+
+                0.0f, 0.0f, 0.0f,
+                -0.1f, -0.4f, 0.0f,
+                -0.350f, 0.0f, 0.0f
+
+        };
+
+        float shapeA9[] = {
+
+                0.350f, 0.0f, 0.0f,
+                0.4f, -0.4f, 0.0f,
+                0.1f, -0.4f, 0.0f
+
+        };
+
+        float shapeA10[] = {
+
+                -0.350f, 0.0f, 0.0f,
+                -0.4f, -0.4f, 0.0f,
+                -0.1f, -0.4f, 0.0f
+
+        };
+        */
+
+        //===================================
+
+        //Huruf E
+
+        float shapeE1[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE2[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE3[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE4[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE5[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE6[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE7[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+        float shapeE8[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+
+        float shapeE9[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
+
+
+        float shapeE10[] = {
+
+                0.1f, 0.5f, 0.0f,
+                0.2f, 0.3f, 0.0f,
+                0.0f, 0.3f, 0.0f
+
+        };
 
 
         //===================================
 
         GLES20.glClearColor(1.000f, 1.000f, 1.000f, 1.0f);
 
+
+        //Huruf D
+        //===================================
+        /*
         mTriangle1 = new Triangle(triangleCoords1);
         mTriangle2 = new Triangle(triangleCoords2);
         mTriangle3 = new Triangle(triangleCoords3);
@@ -142,8 +326,38 @@ public class myRenderer implements GLSurfaceView.Renderer {
         mTriangle10 = new Triangle(triangleCoords10);
         mTriangle11 = new Triangle(triangleCoords11);
         mTriangle12 = new Triangle(triangleCoords12);
+        */
+
+        //===================================
+        /*
+        // Huruf A
+        mHurufA1 = new Triangle1(shapeA1);
+        mHurufA2 = new Triangle1(shapeA2);
+        mHurufA3 = new Triangle1(shapeA3);
+        mHurufA4 = new Triangle1(shapeA4);
+        mHurufA5 = new Triangle1(shapeA5);
+        mHurufA6 = new Triangle1(shapeA6);
+        mHurufA7 = new Triangle1(shapeA7);
+        mHurufA8 = new Triangle1(shapeA8);
+        mHurufA9 = new Triangle1(shapeA9);
+        mHurufA10 = new Triangle1(shapeA10);
+        */
+        //===================================
+        // Huruf E
 
 
+        mHurufE1 = new Triangle2(shapeE1);
+        mHurufE2 = new Triangle2(shapeE2);
+        mHurufE3 = new Triangle2(shapeE3);
+        mHurufE4 = new Triangle2(shapeE4);
+        mHurufE5 = new Triangle2(shapeE5);
+        mHurufE6 = new Triangle2(shapeE6);
+        mHurufE7 = new Triangle2(shapeE7);
+        mHurufE8 = new Triangle2(shapeE8);
+        mHurufE9 = new Triangle2(shapeE9);
+        mHurufE10 = new Triangle2(shapeE10);
+
+        //===================================
     }
 
 
@@ -179,7 +393,8 @@ public class myRenderer implements GLSurfaceView.Renderer {
         float color12[] = {	0.980f, 0.502f, 0.447f, 0.0f};
 
         //===================================
-
+        /*
+        //Huruf D
         //deklarasi Object yang akan di draw
         mTriangle1.draw(mMVPMatrix, color1);
         mTriangle2.draw(mMVPMatrix, color2);
@@ -193,10 +408,39 @@ public class myRenderer implements GLSurfaceView.Renderer {
         mTriangle10.draw(mMVPMatrix, color10);
         mTriangle11.draw(mMVPMatrix, color11);
         mTriangle12.draw(mMVPMatrix, color12);
-
-
+        */
 
         //===================================
+        /*
+        //Huruf A
+        //deklarasi Object yang akan di draw
+        mHurufA1.draw(mMVPMatrix, color1);
+        mHurufA2.draw(mMVPMatrix, color2);
+        mHurufA3.draw(mMVPMatrix, color3);
+        mHurufA4.draw(mMVPMatrix, color4);
+        mHurufA5.draw(mMVPMatrix, color5);
+        mHurufA6.draw(mMVPMatrix, color6);
+        mHurufA7.draw(mMVPMatrix, color7);
+        mHurufA8.draw(mMVPMatrix, color8);
+        mHurufA9.draw(mMVPMatrix, color9);
+        mHurufA10.draw(mMVPMatrix, color10);
+        */
+
+        //====================================
+
+        //Huruf E
+        mHurufE1.draw(mMVPMatrix, color1);
+        mHurufE2.draw(mMVPMatrix, color2);
+        mHurufE3.draw(mMVPMatrix, color3);
+        mHurufE4.draw(mMVPMatrix, color4);
+        mHurufE5.draw(mMVPMatrix, color5);
+        mHurufE6.draw(mMVPMatrix, color6);
+        mHurufE7.draw(mMVPMatrix, color7);
+        mHurufE8.draw(mMVPMatrix, color8);
+        mHurufE9.draw(mMVPMatrix, color9);
+        mHurufE10.draw(mMVPMatrix, color10);
+
+        //====================================
 
     }
 
